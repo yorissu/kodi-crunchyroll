@@ -1,0 +1,39 @@
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile check
+        run: python -m compileall -q plugin.video.crunchyrollqr
+      - name: Tests (QR encoder, decoded with zxing-cpp)
+        run: |
+          pip install zxing-cpp pillow
+          python -m unittest discover -s tests -v
+      - name: Build zips
+        run: python build_zip.py
+      - name: Kodi add-on checker (on the built add-on, which includes icon and licence)
+        run: |
+          pip install kodi-addon-checker
+          mkdir -p checked
+          unzip -q dist/plugin.video.crunchyrollqr-*.zip -d checked
+          kodi-addon-checker --branch omega checked/plugin.video.crunchyrollqr
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zips
+          path: dist/

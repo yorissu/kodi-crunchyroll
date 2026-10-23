@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="General">
+        <setting id="locale" type="labelenum" label="Metadata language" values="en-US|de-DE|es-419|es-ES|fr-FR|it-IT|pt-BR|pt-PT|ru-RU|ar-SA|hi-IN" default="en-US"/>
+        <setting id="audio" type="labelenum" label="Audio language" values="Ask every time|ja-JP|en-US|de-DE|es-419|es-ES|fr-FR|it-IT|pt-BR|ru-RU|ar-SA|hi-IN" default="Ask every time"/>
+        <setting type="action" label="Sign in again (QR)" action="RunPlugin(plugin://plugin.video.crunchyrollqr/?action=login)"/>
+        <setting type="action" label="Sign out" action="RunPlugin(plugin://plugin.video.crunchyrollqr/?action=logout)"/>
+    </category>
+</settings>

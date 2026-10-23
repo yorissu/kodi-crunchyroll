@@ -1,0 +1,21 @@
+<addon id="repository.crunchyrollqr" name="Crunchyroll (QR) repository" version="1.0.0" provider-name="yorissu">
+	<extension point="xbmc.addon.repository" name="Crunchyroll (QR) repository">
+		<dir>
+			<info compressed="false">https://yorissu.github.io/kodi-crunchyroll/repo/addons.xml</info>
+			<checksum>https://yorissu.github.io/kodi-crunchyroll/repo/addons.xml.md5</checksum>
+			<datadir zip="true">https://yorissu.github.io/kodi-crunchyroll/repo/</datadir>
+			<hashes>sha256</hashes>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Updates for the Crunchyroll (QR) add-on (tested releases)</summary>
+		<description lang="en_GB">Installs and keeps the Crunchyroll (QR) video add-on up to date with tested releases.</description>
+		<platform>all</platform>
+		<license>MIT</license>
+		<website>https://github.com/yorissu/kodi-crunchyroll</website>
+		<source>https://github.com/yorissu/kodi-crunchyroll</source>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>

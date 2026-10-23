@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.crunchyrollqr" name="Crunchyroll (QR)" version="0.0.0" provider-name="yorissu">
+    <!-- version is a placeholder: build_zip.py writes the one from the git tag into the zip -->
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+        <import addon="inputstream.adaptive" version="20.0.0"/>
+        <import addon="script.module.inputstreamhelper" version="0.6.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Watch Crunchyroll, sign in with a QR code</summary>
+        <description lang="en_GB">Unofficial Crunchyroll client. Sign in by scanning a QR code with your phone (crunchyroll.com/activate) - no password is typed or stored in Kodi. Continue watching, watchlist, search, browse, genres, history, profiles and a choice of audio language (original or dub).</description>
+        <disclaimer lang="en_GB">Not affiliated with Crunchyroll. Requires a Crunchyroll account; premium content needs a premium subscription.</disclaimer>
+        <platform>all</platform>
+        <license>MIT</license>
+        <website>https://github.com/yorissu/kodi-crunchyroll</website>
+        <source>https://github.com/yorissu/kodi-crunchyroll</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
